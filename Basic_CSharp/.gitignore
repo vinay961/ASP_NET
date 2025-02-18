@@ -1,0 +1,6 @@
+# Ignore Visual Studio cache and temporary files
+.vs/
+*.suo
+*.user
+*.db
+*.sln.docstates
