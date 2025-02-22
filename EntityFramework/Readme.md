@@ -28,8 +28,8 @@
 - The View displays the data as an HTML table.
 
 📝 From View to Database (Saving Data)
-1️ User fills a form and clicks Submit.
-2️ Form data is sent to UserController via HTTP POST.
-3️ UserController saves the data in the database using _context.Users.Add(user); _context.SaveChanges();.
-4️ Database stores the new record.
-5️ User is redirected to the Index page, where the new data is displayed.
+- User fills a form and clicks Submit.
+- Form data is sent to UserController via HTTP POST.
+- UserController saves the data in the database using _context.Users.Add(user); _context.SaveChanges();.
+- Database stores the new record.
+- User is redirected to the Index page, where the new data is displayed.
