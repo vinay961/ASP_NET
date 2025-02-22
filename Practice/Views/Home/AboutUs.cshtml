@@ -1,0 +1,12 @@
+﻿@*@model Practice.Models.RegisterViewModel*@
+
+@model List<Practice.Models.RegisterViewModel>
+
+<div class="container">
+    @{ 
+        foreach (var i in Model)
+        {
+            <h3>@i.FullName</h3>
+        }
+     }
+</div>

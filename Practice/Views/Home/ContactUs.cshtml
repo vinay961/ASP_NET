@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div>
+    <h1>This is Contact Us page</h1>
+    @{
+        string x = @ViewBag.Name;
+        if (x != null)
+        {
+            <h2>Name: @ViewBag.Name</h2>
+        }
+        else
+        {
+            <h2>We can't access the ViewBag data.</h2>
+        }
+        string y = (string)TempData["Name"];
+        if (y != null)
+        {
+            <h2>Name: @TempData["Name"]</h2>
+            <p>This is first request after home page, so temp data is accessed.</p>
+        }
+        else
+        {
+            <h2>We can't access the Temp data after consequetive request happened.</h2>
+        }
+
+    }
+
+    @{
+        Html.RenderPartial("_employeelist");
+    }
+
+    @model List<Practice.Models.Product>
+
+    @{ 
+        foreach(var item in Model)
+        {
+            Html.RenderPartial("_ProductItems", item);            
+        }
+    }
+
+</div>

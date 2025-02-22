@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="page-header">
+    <ul>
+        <li>@Html.ActionLink("Home","","Home")</li>
+        <li>@Html.ActionLink("AboutUs","AboutUs","Home")</li>
+        <li>@Html.ActionLink("ContactUs","ContactUs","Home")</li>
+    </ul>
+</div>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>This is Home page</p>
+</div>
+
+<div class="">
+    @Html.TextArea("fullName","Vinay", new { style = "background-color: grey", title="Enter Your Name"})
+</div>

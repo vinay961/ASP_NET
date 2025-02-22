@@ -1,0 +1,26 @@
+﻿
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model Practice.Models.Product
+
+<table border="1" width="400">
+    <tr>
+        <td>
+            <img src="@Url.Content(Model.Image)" width="150" height="150" />
+        </td>
+        <td>
+            <table>
+                <tr>
+                    <td>Product Id:</td>
+                    <td>@Model.Id</td>
+                </tr>
+                <tr>
+                    <td>Product Name:</td>
+                    <td>@Model.Name</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
