@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+    ViewData["Title"] = "Student Registration";
+}
+
+<div class="container d-flex flex-column align-items-center justify-content-center vh-100 text-center">
+    <h1 class="display-3 fw-bold text-primary">Student Registration Portal</h1>
+    <p class="lead text-secondary">Register and manage student details efficiently.</p>
+
+    <a asp-controller="RegisterStudent" asp-action="Add" class="btn btn-success btn-lg mt-3">
+        Register Now
+    </a>
+
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-dark fw-bold">Easy Registration</h5>
+                    <p class="card-text text-muted">Simple and quick student registration process.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-dark fw-bold">Manage Data</h5>
+                    <p class="card-text text-muted">View and update student records anytime.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-dark fw-bold">Secure System</h5>
+                    <p class="card-text text-muted">Ensuring data security and integrity.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

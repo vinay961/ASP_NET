@@ -7,16 +7,15 @@ namespace EntityFramework.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
+    private readonly StudentContext _db;
+    public HomeController(ILogger<HomeController> logger, StudentContext db)
     {
         _logger = logger;
+        _db = db;
     }
-
-    StudentContext db = new StudentContext();
     public IActionResult Index()
     {
-        var data = db.Students.ToList();
+        var data = _db.Students.ToList();
         return View(data);
     }
 
