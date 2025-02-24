@@ -16,3 +16,11 @@
 
 `To get the cookie follow below steps:`
 1. HttpCookie cookie = Request.Cookie[`<CookieName>`]
+
+## How to make cookie persistent
+cookie.Expires = DateTime.Now.AddDays(2); 
+It means that the current cookie is going to expired after two days.
+
+### What is difference between cookie and session?
+- Cookies are used for client side state management, means that it get stored at `client` browser.
+- Session are used for server side state management, means that it get stored at `server` browser.
