@@ -135,5 +135,26 @@ namespace LoginAndLogout.Controllers
 
             return RedirectToAction("List", "HandleEmployee");
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Search(string searchBy, string search)
+        {
+            if (searchBy == "Name")
+            {
+                //var data = await dbContext.Employees.Where(model => model.Name == search).ToListAsync();
+                var data = await dbContext.Employees.Where(model => model.Name.StartsWith(search)).ToListAsync();
+                return View(data);
+            }
+            else if(searchBy == "Email")
+            {
+                var data = await dbContext.Employees.Where(model => model.Email == search).ToListAsync();
+                return View(data);
+            }
+            else
+            {
+                var data = await dbContext.Employees.ToListAsync();
+                return View(data);
+            }
+        }
     }
 }
